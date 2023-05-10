@@ -9,6 +9,7 @@
 .check{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 15px;
     justify-content: space-between;
     padding: 10px;
@@ -19,6 +20,9 @@
 
 .task-container ul li{
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .task-container ul{
@@ -29,8 +33,8 @@
     align-items: center;
 }
 .complete{
-    border-right: #2ccc71 solid;
+    border-right: #2ccc71 solid 5px;
 }
 .no{
-    border-right: #FF5733 solid;
+    border-right: #FF5733 solid 5px;
 }
