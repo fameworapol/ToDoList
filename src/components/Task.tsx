@@ -1,15 +1,22 @@
+import React, { useState } from "react";
 import Item from "../model/items"
 import '../style/Task.css'
-interface TaskItem{
-    items:Item[]
+import { log } from "console";
+import Status from "./status";
+interface TaskItem {
+    items: Item[]
 }
-export default function Task(props:TaskItem):JSX.Element {
-    
+export default function Task(props: TaskItem): JSX.Element {
     return (
         <div className="task-container">
             <ul>
-                {props.items.map((elm)=>{
-                    return <div className="check"><li>{elm.name}</li><input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" defaultChecked={elm.complete}/></div>
+                {props.items.map((elm) => {
+                    return (
+                        <div className={`check ${elm.complete ? "complete":"no"}`}>
+                            <li>{elm.name}</li>
+                            <Status item={elm}/>
+                        </div>
+                    )
                 })}
             </ul>
         </div>
