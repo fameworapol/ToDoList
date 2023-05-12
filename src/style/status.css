@@ -6,6 +6,18 @@
 }
 .status{
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.progression{
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
+.progression button{
+    width: 20px;
+    height: 23px;
+    padding: 0;
 }

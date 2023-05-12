@@ -24,7 +24,7 @@ function App() {
   }
   function onAddItem(name:string){
     let key = generatedID()
-    const newTask:Item = {name:name,id:key,complete:false}
+    const newTask:Item = {name:name,id:key,complete:false,progress:0}
     item.push(newTask)
     //setItem([...item,{id:key,name:name,complete:false}])
     localStorage.setItem("myList",JSON.stringify(item))
