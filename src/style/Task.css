@@ -1,6 +1,7 @@
 .task-container{
     margin-top: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 20px;
@@ -13,28 +14,37 @@
     gap: 15px;
     justify-content: space-between;
     padding: 10px;
-    background-color: cornsilk;
+    background-color: #D27685;
     width: 50vw;
     box-shadow: 2px 2px 2px 2px gray;
 }
 
 .task-container ul li{
+    height: 50%;
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    flex-direction: row;
 }
 
 .task-container ul{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.complete{
-    border-right: #2ccc71 solid 5px;
-}
-.no{
-    border-right: #FF5733 solid 5px;
-}
+/*Retro Style Card*/
+
+.card {
+    width: 190px;
+    height: 204px;
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 0;
+    box-shadow: 15px 15px 0 -2.5px #fff, 15px 15px 0 0 #000;
+  }

@@ -1,23 +1,69 @@
-.deleteTask{
-    background: none;
-    border: none;
-    font-weight: bolder;
-    font-size: 30px;
+.deleteTask {
+  background: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 30px;
 }
-.status{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.status-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.status {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.progression{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.progression {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.progression button{
-    width: 20px;
-    height: 23px;
-    padding: 0;
+
+.progression button {
+  width: 20px;
+  height: 23px;
+  padding: 0;
+}
+
+.progress {
+  height: 100px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  /*display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;*/
+}
+
+.container svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  transition: all 0.3s;
+  fill: #666;
+}
+
+.container svg:hover {
+  transform: scale(1.1);
+}
+
+.container input:checked~svg {
+  fill: #ffeb49;
 }

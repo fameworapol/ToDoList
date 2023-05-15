@@ -1,11 +1,117 @@
-
-.taskform{
+.taskform {
+    margin-top: 20px;
     width: 50vw;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
-.taskform-component{
+.taskform-component {
     display: flex;
     justify-content: center;
 }
+
+.input-container {
+    position: relative;
+}
+
+.input {
+    padding: 10px;
+    height: 40px;
+    width: 500px;
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    box-shadow: 7px 7px 0px 0px black;
+    transition: all 0.5s;
+}
+
+.input:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+}
+
+.label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    transition: all 0.5s;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.input-container .topline {
+    position: absolute;
+    content: "";
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus~.topline {
+    width: 35%;
+    transition: all 0.5s;
+}
+
+.input-container .underline {
+    position: absolute;
+    content: "";
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus~.underline {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.input-container input[type="text"]:focus~.label {
+    top: -10px;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+/*Button*/
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: white;
+    --button_outline_color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }

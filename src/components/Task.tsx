@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Item from "../model/items"
 import '../style/Task.css'
-import { log } from "console";
 import Status from "./status";
 interface TaskItem {
     items: Item[]
@@ -12,8 +11,8 @@ export default function Task(props: TaskItem): JSX.Element {
             <ul>
                 {props.items.map((elm) => {
                     return (
-                        <div className={`check ${elm.complete ? "complete":"no"}`}>
-                            <li>{elm.name}</li>
+                        <div className="card">
+                            <li><h4>{elm.name}</h4></li>
                             <Status item={elm}/>
                         </div>
                     )
